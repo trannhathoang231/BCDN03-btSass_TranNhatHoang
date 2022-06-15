@@ -1,0 +1,92 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    overflow: visible;
+    background: $color-white-1;
+    box-shadow: 0 2px 4px $color-white-2;
+    background-image: url(../img/yellow_top_wave_01.png);
+    background-size: cover;
+    background-position: right;
+
+
+
+    .nav-item{
+        padding-right: $pd-2;
+
+        .nav-link {
+            @include styleText($fs-2,$fw-2,$color-blue-1);
+            transition: all 0.5s;
+
+            &::after {
+                display: block;
+                content: '';
+                width: 100%;
+                height: 3px;
+                background-color: $color-pink-1;
+                transform: scaleX(0);
+                transition: all .5s;
+            }
+            &:hover {
+                color: $color-pink-1;
+
+                &::after{
+                    transform: scaleX(1);
+                }
+            }
+
+        }
+
+        &.active {
+            .nav-link{
+                &::after {
+                    transform: scaleX(1);
+                  }
+            }
+        }
+    };
+
+
+
+    .topBarInMenu {
+        float: right;
+        height: $height-1;
+        margin-left: $mg-1;
+        display: flex;
+        align-items: center;
+
+        .topBarInMenuCell {
+            line-height: $lh-1;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+            font-size: $fs-4;
+
+            a{
+                color: $color-dark-1;
+                padding-right: $pd-3;
+            }
+
+            .btButtonWidget {
+                display: inline;
+                padding-right: $pd-1;
+              }
+          }
+      }
+
+}
+
+
+
+// responsive
+
+@include responsive("large"){
+    //992px
+    header{
+        .nav-link{
+            text-align: center;
+        }
+    }
+}

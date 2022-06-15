@@ -1,0 +1,64 @@
+.teacherShowcase{
+    background-color: $color-white-4;
+    background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    .teacher_list {
+        width: 75%;
+        margin: 0 auto 0;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: $gap-1;
+    }
+
+    .teacher_content {
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: $bd-3 $bd-3 0 0;
+        }
+
+        .teacher_inner{
+            text-align: center;
+            background-color: $color-white-3;
+            padding: $pd-1;
+            border-radius: 0 0 $bd-3 $bd-3;
+
+
+            h3{
+                @include styleText($fs-8,$fw-2,$color-pink-1);
+                margin-bottom: $mg-3;                
+            };
+
+            h2{
+                @include styleText($fs-9,$fw-2,$color-dark-3);
+            }
+
+            p{
+                @include styleText($fs-1,$fw-1,$color-dark-3);
+            }
+            
+        }
+    }
+
+}
+
+
+
+@include responsive("large"){
+
+    .teacherShowcase{
+        .teacher_list {
+            width: 90%;
+            margin: 0 auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+    }    
+}

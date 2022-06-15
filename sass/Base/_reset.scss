@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html,body{
+    font-family: 'Roboto', sans-serif;
+    @include styleText($fs-1,$fw-1,$color-dark-4);
+
+    background-color: $color-white-1;
+}
+.btPageWrap:after {
+    content: " ";
+    display: table;
+    width: 100%;
+    clear: both;
+    line-height: 0;
+}

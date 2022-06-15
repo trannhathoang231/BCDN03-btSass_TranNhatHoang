@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #656774;
+  background-color: #f5f9fe;
+}
+
+.btPageWrap:after {
+  content: " ";
+  display: table;
+  width: 100%;
+  clear: both;
+  line-height: 0;
+}
+
+.btButtonWidget > button {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 0px 20px;
+  background: #b61984;
+  border: solid 2px #b61984;
+  border-radius: 50px;
+  text-align: center;
+  transition: all .5s;
+}
+
+.btButtonWidget > button:hover {
+  background: #fff;
+  border-color: #b61984;
+  color: #b61984;
+}
+
+.btContactButton button {
+  padding: 10px 60px;
+  background: #b61984;
+  border: 2px solid #b61984;
+  border-radius: 50px;
+  color: #fff;
+  transition: all .5s;
+  width: 60%;
+}
+
+.btContactButton button:hover {
+  background: #fff;
+  border-color: #b61984;
+  color: #b61984;
+}
+
+.btNewsletterButton button {
+  margin-top: 5px;
+  border-radius: 50px;
+  height: 4em;
+  width: 100% !important;
+  border: 2px solid #fff;
+  color: #191919;
+  transition: all .5s;
+}
+
+.btNewsletterButton button:hover {
+  background: #b61984;
+  border-color: #fff;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  overflow: visible;
+  background: #f5f9fe;
+  box-shadow: 0 2px 4px #e2ebfc;
+  background-image: url(../img/yellow_top_wave_01.png);
+  background-size: cover;
+  background-position: right;
+}
+
+header .nav-item {
+  padding-right: 40px;
+}
+
+header .nav-item .nav-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1d365e;
+  transition: all 0.5s;
+}
+
+header .nav-item .nav-link::after {
+  display: block;
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #b61984;
+  transform: scaleX(0);
+  transition: all .5s;
+}
+
+header .nav-item .nav-link:hover {
+  color: #b61984;
+}
+
+header .nav-item .nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+header .nav-item.active .nav-link::after {
+  transform: scaleX(1);
+}
+
+header .topBarInMenu {
+  float: right;
+  height: 80px;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+header .topBarInMenu .topBarInMenuCell {
+  line-height: 38px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+
+header .topBarInMenu .topBarInMenuCell a {
+  color: #000;
+  padding-right: 10px;
+}
+
+header .topBarInMenu .topBarInMenuCell .btButtonWidget {
+  display: inline;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  header .nav-link {
+    text-align: center;
+  }
+}
+
+.secCarousel {
+  background-image: url(../../img/Violet_top_left_wave.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  margin-top: 100px;
+  right: 0;
+  left: 0;
+}
+
+.secCarousel span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #b61984;
+  margin-bottom: 0.5em;
+}
+
+.secCarousel h1 {
+  font-size: 57px;
+  font-weight: 600;
+  color: #000;
+}
+
+.teacherShowcase {
+  background-color: #dcd1f0;
+  background-image: url(../img/Wave_White_bottom_right_shape_01.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.teacherShowcase .teacher_list {
+  width: 75%;
+  margin: 0 auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.teacherShowcase .teacher_content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.teacherShowcase .teacher_content .teacher_inner {
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+
+.teacherShowcase .teacher_content .teacher_inner h3 {
+  font-size: 11.25px;
+  font-weight: 600;
+  color: #b61984;
+  margin-bottom: 0.7em;
+}
+
+.teacherShowcase .teacher_content .teacher_inner h2 {
+  font-size: 23.25px;
+  font-weight: 600;
+  color: #191919;
+}
+
+.teacherShowcase .teacher_content .teacher_inner p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #191919;
+}
+
+@media screen and (max-width: 992px) {
+  .teacherShowcase .teacher_list {
+    width: 90%;
+    margin: 0 auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+.secForm {
+  background-image: url(../img/accent_bottom_wave_01.png);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  right: 0;
+  left: 0;
+  padding-top: 100px;
+}
+
+.secForm .btContact {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.secForm .btContact h3 {
+  font-size: 37.5px;
+  font-weight: 700;
+  color: #191919;
+}
+
+.secForm .btContact .btContactRow {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 1em;
+}
+
+.secForm .btContact .btContactRow .btContactName {
+  padding-right: 1em;
+  position: relative;
+  display: block;
+}
+
+.secForm .btContact .btContactRow .btContactEmail {
+  position: relative;
+}
+
+.secForm .btContact .btContactRow .icon {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  line-height: 1;
+}
+
+.secForm .btContact .btContactRow input {
+  padding: 1em 1em 1em 3.5em !important;
+  font-size: 0.9em !important;
+  height: 3.7em;
+  width: 70%;
+  border-radius: 50px;
+}
+
+.secForm .btContact .btContactRow textarea {
+  padding: 1em 1em 1em 3.5em !important;
+  height: 80px;
+  line-height: 1.5;
+  font-size: 0.9em !important;
+  width: 70%;
+  border-radius: 10px;
+}
+
+.secForm .btContact .btContactMessage {
+  flex: 1 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.secForm .btContact select {
+  width: 70%;
+  border-radius: 50px;
+}
+
+.secForm .btContact .btContactButton {
+  width: 60%;
+}
+
+.secForm .btContact i {
+  color: #b61984;
+}
+
+footer {
+  background-image: url(../img/footer_background.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  padding: 100px;
+}
+
+footer .secFooter {
+  color: #fff;
+  line-height: 2;
+}
+
+footer .secFooter > span {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 30px -10;
+  line-height: 1;
+}
+
+footer .secFooter .social li {
+  display: inline-block;
+  margin-right: 5px;
+  color: #fff;
+}
+
+footer .secFooter ul li {
+  list-style: none;
+  text-decoration: none;
+}
+
+footer .secFooter ul li i {
+  padding-right: 10px;
+}
+
+footer .secFooter ul li a {
+  color: #fff;
+}
+
+footer .secFooter ul li a:hover {
+  text-decoration: none;
+  color: #ffffff9e;
+}
+
+footer .secFooter .btNewsletterColumn input {
+  border: 1px solid #ffffff1a;
+  border-radius: 20px;
+  color: #fff;
+  transition: all 500ms ease;
+  text-align: center;
+  outline: none;
+  width: 100%;
+  background: #0000001a;
+  line-height: 1;
+  display: block;
+  padding: 1em;
+}
+
+footer .secFooter .btNewsletterColumn input:focus {
+  border: 1px solid #fff;
+}
+
+footer .bt_bb_custom_menu ul li {
+  list-style: none;
+  border-bottom: 1px solid #0000001a;
+  line-height: 1;
+  padding: 1em 0;
+}
+/*# sourceMappingURL=main.css.map */

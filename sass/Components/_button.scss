@@ -1,0 +1,38 @@
+.btButtonWidget>button{
+    @include styleText($fs-5,$fw-2,$color-white-3);
+    @include styleButton(0px,$pd-1,$color-pink-1,solid 2px $color-pink-1);
+    text-align: center;
+    transition: all .5s;
+    &:hover{
+        @include styleButtonHover($color-white-3,$color-pink-1,$color-pink-1)
+        
+      }
+}
+
+
+.btContactButton button{
+    @include styleButton($pd-3,$pd-2+20,$color-pink-1, 2px solid $color-pink-1);
+    color: $color-white-3;
+    transition: all .5s;
+    width: 60%;
+
+    &:hover{
+        @include styleButtonHover($color-white-3,$color-pink-1,$color-pink-1)
+    }
+
+}
+
+
+.btNewsletterButton button{
+    margin-top: $mg-5;
+    border-radius: $bd-2;
+    height: $height-2+0.3;
+    width: 100% !important;
+    border: 2px solid $color-white-3;
+    color: $color-dark-3;
+    transition: all .5s;
+
+    &:hover{
+        @include styleButtonHover($color-pink-1,$color-white-3,$color-white-3)
+    }
+}

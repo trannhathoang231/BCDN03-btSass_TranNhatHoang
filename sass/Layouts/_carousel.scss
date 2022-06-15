@@ -1,0 +1,20 @@
+.secCarousel{
+    background-image: url(../../img/Violet_top_left_wave.png);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin-top: $mg-6;
+    right: 0;
+    left: 0;
+
+    span{
+        @include styleText($fs-7,$fw-1,$color-pink-1);
+        margin-bottom: $mg-2;
+      }
+
+    h1{
+        @include styleText($fs-6,$fw-2,$color-dark-1);
+    }
+}
+
+

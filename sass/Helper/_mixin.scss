@@ -1,0 +1,35 @@
+@mixin styleText($fs,$fw,$color){
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+}
+
+@mixin styleButton($py,$px,$bg,$bd) {
+    padding: $py $px;
+    background: $bg;
+    border: $bd;
+    border-radius: $bd-2;
+}
+@mixin styleButtonHover($bg,$bd,$color) {
+    background: $bg;
+    border-color: $bd;
+    color: $color;
+}
+
+
+// $screen: tên màn hình (vd: medium..)
+@mixin responsive($screen) {
+    
+    @if (map-has-key($map: $breakpoints, $key: $screen)) {
+        //tìm thấy màn hình
+        $value: map-get($map: $breakpoints, $key: $screen);
+        @media screen and (max-width:$value) {
+            // .đoạn code responsive cần cho teho màn hình khi gọi mixin
+            @content;
+        }
+
+    }
+    @else{
+        @error "screen doesn't exist"
+    }
+}

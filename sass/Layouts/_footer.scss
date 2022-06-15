@@ -1,0 +1,73 @@
+footer{
+    background-image: url(../img/footer_background.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    padding: $pd-4;
+
+    .secFooter{
+        color: $color-white-3;
+        line-height: $lh-2+1;
+
+        >span{
+            @include styleText($fs-7+10,$fw-3,$color-white-3);
+            margin-bottom: $mg-4 -10;
+            line-height: $lh-2;
+        }
+        .social  {
+            li{
+                display: inline-block;
+                margin-right: $mg-5;
+                color: $color-white-3;
+            }
+        }
+        ul {
+            li {
+                list-style: none;
+                text-decoration: none;
+
+                i{
+                    padding-right: 10px;
+                }
+                a {
+                    color: $color-white-3;
+                    &:hover {
+                        text-decoration: none;
+                        color: $color-dark-5;
+                    }
+                }
+            }
+        }
+
+        .btNewsletterColumn {
+            input{
+                border: 1px solid $color-dark-7;
+                border-radius: $bd-3 +10;
+                color: $color-white-3;
+                transition: all 500ms ease;
+                text-align: center;
+                outline: none;
+
+                width: 100%;
+                background: $color-dark-6;
+                line-height: $lh-2;
+                display: block;
+                padding: $pd-5;
+
+                &:focus{
+                    border: $bd-4 solid $color-white-3;
+                }
+            }
+        }
+
+
+    }
+
+    .bt_bb_custom_menu ul li {
+        list-style: none;
+        border-bottom: 1px solid $color-dark-6;
+        line-height: $lh-2;
+        padding: $pd-5 0;
+    }
+}
