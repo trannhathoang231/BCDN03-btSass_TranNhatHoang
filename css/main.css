@@ -120,7 +120,6 @@ header .nav-item.active .nav-link::after {
 header .topBarInMenu {
   float: right;
   height: 80px;
-  margin-left: 50px;
   display: flex;
   align-items: center;
 }
@@ -143,6 +142,12 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   padding-right: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+  header .topBarInMenu .topBarInMenuCell {
+    font-size: 11.25px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   header .nav-link {
     text-align: center;
@@ -157,6 +162,7 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   margin-top: 100px;
   right: 0;
   left: 0;
+  flex-direction: column;
 }
 
 .secCarousel span {
@@ -170,6 +176,15 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   font-size: 57px;
   font-weight: 600;
   color: #000;
+}
+
+@media screen and (max-width: 992px) {
+  .secCarousel .row {
+    flex-direction: column;
+  }
+  .secCarousel span, .secCarousel h1 {
+    text-align: center;
+  }
 }
 
 .teacherShowcase {
@@ -188,6 +203,23 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .teacherShowcase .teacher_list {
+    width: 90%;
+    margin: 0 auto 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .teacherShowcase .teacher_list {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .teacherShowcase .teacher_content img {
@@ -223,16 +255,6 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   color: #191919;
 }
 
-@media screen and (max-width: 992px) {
-  .teacherShowcase .teacher_list {
-    width: 90%;
-    margin: 0 auto 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-
 .secForm {
   background-image: url(../img/accent_bottom_wave_01.png);
   background-size: cover;
@@ -252,12 +274,17 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   font-size: 37.5px;
   font-weight: 700;
   color: #191919;
+  text-align: center;
 }
 
 .secForm .btContact .btContactRow {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 1em;
+}
+
+.secForm .btContact .btContactRow .nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .secForm .btContact .btContactRow .btContactName {
@@ -272,8 +299,8 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
 
 .secForm .btContact .btContactRow .icon {
   position: absolute;
-  top: 1em;
-  left: 1em;
+  top: 1.2em;
+  left: 2em;
   line-height: 1;
 }
 
@@ -281,7 +308,7 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   padding: 1em 1em 1em 3.5em !important;
   font-size: 0.9em !important;
   height: 3.7em;
-  width: 70%;
+  width: 100%;
   border-radius: 50px;
 }
 
@@ -290,7 +317,7 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
   height: 80px;
   line-height: 1.5;
   font-size: 0.9em !important;
-  width: 70%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -301,16 +328,31 @@ header .topBarInMenu .topBarInMenuCell .btButtonWidget {
 }
 
 .secForm .btContact select {
-  width: 70%;
+  width: 100%;
   border-radius: 50px;
 }
 
 .secForm .btContact .btContactButton {
-  width: 60%;
+  width: 100%;
 }
 
 .secForm .btContact i {
   color: #b61984;
+}
+
+@media screen and (max-width: 992px) {
+  .secForm {
+    padding-top: 0;
+  }
+  .secForm .row {
+    flex-direction: column-reverse;
+  }
+  .secForm .btContact .btContactRow .btContactName input {
+    margin-bottom: 10px;
+  }
+  .btn:not(:disabled):not(.disabled) {
+    width: 100%;
+  }
 }
 
 footer {
@@ -322,9 +364,22 @@ footer {
   padding: 100px;
 }
 
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 0;
+    padding-top: 100px;
+  }
+}
+
 footer .secFooter {
   color: #fff;
   line-height: 2;
+}
+
+@media screen and (max-width: 768px) {
+  footer .secFooter {
+    text-align: center;
+  }
 }
 
 footer .secFooter > span {
@@ -333,6 +388,12 @@ footer .secFooter > span {
   color: #fff;
   margin-bottom: 30px -10;
   line-height: 1;
+}
+
+@media screen and (max-width: 768px) {
+  footer .secFooter > span {
+    font-size: 23.25px;
+  }
 }
 
 footer .secFooter .social li {
@@ -347,7 +408,7 @@ footer .secFooter ul li {
 }
 
 footer .secFooter ul li i {
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 footer .secFooter ul li a {

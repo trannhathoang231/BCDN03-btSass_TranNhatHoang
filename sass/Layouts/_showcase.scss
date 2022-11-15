@@ -13,6 +13,19 @@
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: $gap-1;
+
+        @include responsive("large"){
+            width: 90%;
+            margin: 0 auto 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        @include responsive("medium"){
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+        }
     }
 
     .teacher_content {
@@ -50,15 +63,3 @@
 
 
 
-@include responsive("large"){
-
-    .teacherShowcase{
-        .teacher_list {
-            width: 90%;
-            margin: 0 auto 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-        }
-    }    
-}

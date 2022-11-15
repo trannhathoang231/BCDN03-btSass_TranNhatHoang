@@ -5,15 +5,24 @@ footer{
     background-repeat: no-repeat;
     background-attachment: scroll;
     padding: $pd-4;
+    @include responsive("medium"){
+        padding: 0;
+        padding-top: $pd-4;
+    }
 
     .secFooter{
         color: $color-white-3;
         line-height: $lh-2+1;
-
+        @include responsive("medium"){
+            text-align: center
+        }
         >span{
             @include styleText($fs-7+10,$fw-3,$color-white-3);
             margin-bottom: $mg-4 -10;
             line-height: $lh-2;
+            @include responsive("medium"){
+                font-size: $fs-9;
+            }
         }
         .social  {
             li{
@@ -28,7 +37,7 @@ footer{
                 text-decoration: none;
 
                 i{
-                    padding-right: 10px;
+                    padding-right: $pd-7;
                 }
                 a {
                     color: $color-white-3;
@@ -37,6 +46,7 @@ footer{
                         color: $color-dark-5;
                     }
                 }
+
             }
         }
 

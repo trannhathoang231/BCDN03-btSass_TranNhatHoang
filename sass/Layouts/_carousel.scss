@@ -6,7 +6,7 @@
     margin-top: $mg-6;
     right: 0;
     left: 0;
-
+    flex-direction: column;
     span{
         @include styleText($fs-7,$fw-1,$color-pink-1);
         margin-bottom: $mg-2;
@@ -15,6 +15,18 @@
     h1{
         @include styleText($fs-6,$fw-2,$color-dark-1);
     }
+
+    // responsive
+    @include responsive("large"){
+        //992px
+        .row{
+            flex-direction: column;
+        }
+        span , h1{
+            text-align: center;
+        }
+    }
 }
+
 
 

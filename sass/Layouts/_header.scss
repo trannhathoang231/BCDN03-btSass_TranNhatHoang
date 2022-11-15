@@ -53,7 +53,7 @@ header {
     .topBarInMenu {
         float: right;
         height: $height-1;
-        margin-left: $mg-1;
+        // margin-left: $mg-1;
         display: flex;
         align-items: center;
 
@@ -72,6 +72,9 @@ header {
             .btButtonWidget {
                 display: inline;
                 padding-right: $pd-1;
+              }
+              @include responsive("extra-large"){
+                font-size: $fs-8;
               }
           }
       }

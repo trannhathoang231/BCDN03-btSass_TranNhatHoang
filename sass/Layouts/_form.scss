@@ -12,8 +12,8 @@
         padding: $pd-3;
 
         h3{
-            @include styleText($fs-10,$fw-3,$color-dark-3)
-        
+            @include styleText($fs-10,$fw-3,$color-dark-3);
+            text-align: center;
         }
 
         .btContactRow {
@@ -21,7 +21,11 @@
             -webkit-flex-wrap: wrap;
             -ms-flex-wrap: wrap;
             flex-wrap: wrap;
-            padding-bottom: $pd-5;
+
+            .nopadding {
+                padding: 0 !important;
+                margin: 0 !important;
+             }
             
             .btContactName {
                 padding-right: $pd-5;
@@ -35,8 +39,8 @@
 
             .icon {
                 position: absolute;
-                top: 1em;
-                left: 1em;
+                top: 1.2em;
+                left: 2em;
                 line-height: $lh-2;
             }
 
@@ -44,7 +48,7 @@
                 padding: $pd-5 $pd-5 $pd-5 $pd-6 !important;
                 font-size: $fs-4 !important;
                 height: $height-2;
-                width: 70%;
+                width: 100%;
                 border-radius: 50px;
             
             }
@@ -54,7 +58,7 @@
                 height: $height-1;
                 line-height: $lh-2 +0.5;
                 font-size: $fs-4 !important;
-                width: 70%;
+                width: 100%;
                 border-radius: $bd-3;
             }
         }
@@ -66,12 +70,12 @@
         }
 
         select{
-            width: 70%;
+            width: 100%;
             border-radius: $pd-2+10;
         }
 
         .btContactButton {
-            width: 60%;
+            width: 100%;
         }
 
         i{
@@ -79,3 +83,22 @@
         }
     }
 }
+
+
+    @include responsive("large"){
+        .secForm{
+            padding-top: 0;
+        }
+        .secForm .row{
+            flex-direction: column-reverse;
+        }
+
+        .secForm .btContact .btContactRow .btContactName input {
+            margin-bottom: 10px;
+        }
+
+        .btn:not(:disabled):not(.disabled) {
+            width: 100%;
+        }
+    }
+    
